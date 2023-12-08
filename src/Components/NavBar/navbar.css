@@ -1,0 +1,126 @@
+/* Navbar.css */
+.navbar {
+  background-color: var(--color-secundary); /* Cambia el color de fondo a blanco */
+  min-height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: normal;
+  padding: 0 1rem;
+  border-bottom: 1px solid #807676; /* Agrega un borde inferior negro */
+  box-shadow: 0 3px 4px rgba(32, 32, 32, 0.1); /* Agrega una sombra ligera */
+}
+
+.menu-bars {
+  font-size: 2rem;
+  background: none;
+  margin-left: 5px;
+  color: var(--color-primary); /* Cambiamos el color del icono a negro */
+  display: flex;
+}
+
+.menu-x {
+  font-size: 2rem;
+  background: none;
+  margin-left: 120px;
+  color: var(--color-secundary); /* Cambiamos el color del icono a negro */
+}
+
+.nav-menu {
+  background-color: var(--color-primary)  ;
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  transition: left 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  border-right: 1px solid #807676; /* Agregamos un borde en el lado derecho */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 4px 0 4px rgba(0, 0, 0, 0.1); /* Agregamos sombra en el lado derecho */
+  z-index: 1000;
+  }
+
+.nav-menu.active {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: left 0.5s ease, opacity 0.5s ease, visibility 0s ease 0s;
+  width: 200px;
+}
+@media (max-width: 700px) {
+  .nav-menu.active {
+    width: 200px;
+  }
+}
+
+.nav-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: var(--color-secundary); 
+  font-size: 18px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color  0.3s ease, transform 0.1s ease;
+}
+
+.nav-text a:hover {
+  background-color: #000000c9;
+  transform: scale(1.03);
+}
+
+.nav-menu-items {
+  width: 100%;
+  padding: 10px;
+}
+
+.navbar-toggle {
+  background-color: var(--color-primary);
+  min-height: 80px; /* Cambiamos height a min-height para que sea responsivo */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: opacity 0.5s ease, visibility 0s ease 0s;
+  opacity: 1;
+}
+
+.navbar-toggle.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0s ease 0.5s;
+}
+
+.icon-homeview{
+  width: 30px;
+  height: 30px;
+}
+
+span {
+  margin-left: 16px;
+}
+
+.navbar-logo {
+  max-width: 120px;
+  height: auto;
+  position: absolute; /* Cambia a absolute */
+  top: 50%; /* Coloca el logo en el centro verticalmente */
+  transform: translateY(-50%); /* Centra verticalmente */
+  left: 60px; /* Ajusta la posición izquierda */
+  color: #000; /* Cambiamos el color del icono a negro */
+}
+
+:root {
+ --color-primary: #008DD8;
+ --color-secundary: #ffff;
+}
+
